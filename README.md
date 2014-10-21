@@ -1,1 +1,1 @@
-following a tutorial on Angular.js
+following tutorials on Angular.js
