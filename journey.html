@@ -1,0 +1,20 @@
+<html ng-app='myApp'>
+	<body ng-controller='TextController'>
+	<p>{{someText.message}}</p>
+
+	<!-- building a checkbox -->
+	<form ng-controller="SomeController">
+	<input type="checkbox" ng-model="youCheckedIt">
+	</form>
+    
+	<script>
+		var myAppModule = angular.module('myApp', []);
+		myAppModule.controller('TextController', function($scope) {
+		
+		var someText = {};
+		someText.message = 'You have started your journey.'; $scope.someText = someText;
+		});
+	</script>
+
+    </body>
+</html>
