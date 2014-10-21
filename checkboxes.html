@@ -1,0 +1,26 @@
+<html>
+	<body> 
+		<!-- building a checkbox -->
+	<div ng-app='checkboxExample'>
+		<form name="myForm" ng-controller="ExampleController">
+		  <h4>Value 1: <input type="checkbox" ng-model="value1"> </h4>
+		  <h4>Value 2: <input type="checkbox" ng-model="value2"
+		                 ng-true-value="'YES'" ng-false-value="'NO'"> </h4>
+		  <h5>value 1 = {{value1}}</h5>
+		  <h5>value 2 = {{value2}}</h5>
+ 		</form>
+ 	</div>
+</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js">
+	    </script>
+   
+
+    	<script>
+		  angular.module('checkboxExample', [])
+		    .controller('ExampleController', ['$scope', function($scope) {
+		      $scope.value1 = true;
+		      $scope.value2 = 'YES'
+		    }]);
+		</script>
+	</body>
+</html>
