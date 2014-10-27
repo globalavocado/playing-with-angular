@@ -1,0 +1,65 @@
+<html ng-app=''>
+
+<head>
+	<title>Startup Calculator</title>
+	<link rel="stylesheet" href="css/foundation.css">
+</head>
+
+<body>
+	<div class='pagination-centered'>
+		<h2>Startup calculator</h2>
+			<div class="line-separator"></div>
+
+				<form ng-submit="requestFunding()" ng-controller="StartUpController"> Starting: &pound; <input ng-change="computeNeeded()" ng-model="startingEstimate"></p> Recommendation: &pound; {{needed}}</p>
+<button>Fund my startup!</button>
+</form>
+			</div>
+	</div>
+
+	<script type="text/javascript" src="js/angular.js"></script> 
+	</script>
+
+	<script>
+		function StartUpController($scope) { 
+			$scope.computeNeeded = function() {
+        $scope.needed = $scope.startingEstimate * 10;
+      		};
+		$scope.requestFunding = function() {
+		window.alert("Sorry, please get more customers first.");
+			};
+		}
+	</script>
+    
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
