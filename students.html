@@ -1,0 +1,41 @@
+<html ng-app=''>
+
+<head>
+	<title>Student List</title>
+	<link rel="stylesheet" href="css/foundation.css">
+	<script type="text/javascript" src="js/angular.js"></script> 
+</head>
+
+<body>
+	<div class='pagination-centered'>
+		<h2>Student List</h2>
+			<div class="line-separator">
+			</div>
+				<div ng-controller='StudentListController'>
+					<ul>
+						<li ng-repeat='student in students'>
+							<a href='/student/view/{{student.id}}'>{{student.name}}</a> 
+						</li>
+					</ul>
+
+					<button ng-click="insertTom()">insert Tom</button>
+				</div>
+	</div>
+
+		
+		<script>
+      			var students = [{name:'Mary Contrary', id:'1'},
+						        {name:'Jack Sprat', id:'2'},
+						        {name:'Jill Hill', id:'3'}];
+
+			      function StudentListController($scope) {
+			        $scope.students = students;
+
+			       $scope.insertTom = function() {
+		   			 $scope.students.splice(1, 0, {name:'Tom Thumb', id:'4'});
+					};
+	    }
+    </script>		
+</body>
+
+</html>

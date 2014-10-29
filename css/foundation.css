@@ -27,6 +27,10 @@ meta.foundation-data-attribute-namespace {
 html, body {
   height: 100%; }
 
+body li{
+  text-align: left;
+}
+
 .line-separator{
   height:1px;
   background:#717171;
