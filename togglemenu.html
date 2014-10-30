@@ -1,0 +1,41 @@
+<html ng-app=''>
+
+<head>
+	<title>Death Ray Menu</title>
+	<link rel="stylesheet" href="css/foundation.css">
+</head>
+
+	<body>
+		<div class='pagination-centered'>
+			<h2>Death Ray Menu</h2>
+				<div class="line-separator">
+				</div>
+					<div ng-controller='DeathrayMenuController'>
+
+					<button ng-click='toggleMenu()'>Toggle Menu</button> 
+
+					<ul ng-show='menuState.show'>
+						
+						<a href="#"><li ng-click='stun()'>stun</li></a>
+						<a href="#"><li ng-click='disintegrate()'>disintegrate</li></a> 
+						<a href="#"><li ng-click='erase()'>erase from history</li></a>
+					</ul> 
+		<div/>
+
+		<script type="text/javascript" src="js/angular.js"></script> 
+	
+		<script>
+	    	function DeathrayMenuController($scope) { 
+	    		// remember to initialise menuState first!
+	    		$scope.menuState = {}
+	    		$scope.menuState = { show: false };
+			
+				$scope.toggleMenu = function() { 
+					$scope.menuState.show = !$scope.menuState.show;
+					};
+				
+				}
+	</script>
+
+	</body>
+</html>
