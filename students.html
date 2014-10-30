@@ -12,6 +12,7 @@
 			<div class="line-separator">
 			</div>
 				<div ng-controller='StudentListController'>
+					<!-- the ng-controller has to be wrapped in a div otherwise the insertTom button will be unresponsive-->
 					<ul>
 						<li ng-repeat='student in students'>
 							<a href='/student/view/{{student.id}}'>{{student.name}}</a> 
