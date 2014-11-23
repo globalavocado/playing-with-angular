@@ -61,6 +61,28 @@ body {
   position: relative;
   cursor: auto; }
 
+  table {
+    margin-left: 10px;
+    float: inherit;
+  }
+
+/* styling with angular.js */
+
+    .menu-disabled-true { color: #ccc;
+    }
+
+    .error { background-color: red;
+    }
+
+    .warning { background-color: yellow;
+    }
+
+    .selected {
+    background-color: lightgreen;
+    }
+
+/* end of styling with angular.js */
+
 a:hover {
   cursor: pointer; }
 
@@ -3430,7 +3452,7 @@ ul.pagination {
 .pagination-centered {
   text-align: center; }
   .pagination-centered ul.pagination li {
-    float: none;
+    float: center;
     display: inline-block; }
 
 .side-nav {

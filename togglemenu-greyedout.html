@@ -1,0 +1,37 @@
+<html ng-app=''>
+
+<head>
+	<title>Death Ray Menu</title>
+	<link rel="stylesheet" href="css/foundation.css">
+</head>
+
+	<body>
+		<div class='pagination-centered'>
+			<h2>Death Ray Menu</h2>
+				<div class="line-separator">
+				</div>
+					<div ng-controller='DeathrayMenuController'> 
+						<ul>
+				<!-- 	<button ng-click='toggleMenu()'>Toggle Menu</button>  -->
+
+					<ul>
+						<li class='menu-disabled-{{isDisabled}}' ng-click='stun()'>stun</li>
+						<li class='menu-disabled-{{isDisabled}}' ng-click='disintegrate()'>disintegrate</li>
+						<li class='menu-disabled-{{isDisabled}}' ng-click='erase()'>erase from history</li>
+					</ul> 
+		<div/>
+
+		<script type="text/javascript" src="js/angular.js"></script> 
+	
+		<script>
+			function DeathrayMenuController($scope) {
+				$scope.isDisabled = false;
+					$scope.stun = function() {
+					// stun the target, then disable menu to allow regeneration 
+					$scope.isDisabled = 'true';
+					}; 
+			}
+	</script>
+
+	</body>
+</html>

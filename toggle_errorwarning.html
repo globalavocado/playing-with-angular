@@ -1,0 +1,54 @@
+<html ng-app=''>
+
+<head>
+	<title>errors, warnings and table highlighting</title>
+	<link rel="stylesheet" href="css/foundation.css">
+</head>
+
+	<body>
+		<div class='pagination-centered'>
+			<h2>errors, warnings and table highlighting</h2>
+				<div class="line-separator">
+				</div>
+					<div ng-controller='HeaderController'>
+						<div ng-class='{error: isError, warning: isWarning}'>{{messageText}}</div>
+						<br />
+						<div>	
+							<button ng-click='showError()'>simulate error</button>
+							<button ng-click='showWarning()'>simulate warning</button>
+						</div>
+					</div>
+
+			
+				<table ng-controller='RestaurantTableController'>
+					<tr ng-repeat='restaurant in directory' ng-click='selectRestaurant($index)'
+					ng-class='{selected: $index==selectedRow}'> <td>{{restaurant.name}}</td> <td>{{restaurant.cuisine}}</td>
+					</tr>
+		    	</table>
+		</div>
+
+		<script type="text/javascript" src="js/angular.js"></script> 
+	
+		<script>
+			function HeaderController($scope) { $scope.isError = false; 
+				$scope.isWarning = false;
+					$scope.showError = function() { $scope.messageText = 'This is an error!'; $scope.isError = true;
+					$scope.isWarning = false;
+					};
+					$scope.showWarning = function() {
+					$scope.messageText = 'Just a warning. Please carry on.'; $scope.isWarning = true;
+					$scope.isError = false;
+					}; 
+			}
+
+			function RestaurantTableController($scope) {
+					$scope.directory = [{name:"P\351ter's Pickled Peppers", cuisine:'Hungarian'},
+					                        {name:'The House of Snooty-Nosed Fish', cuisine:'Posh'},
+					                        {name:"Rita's Greasy Fork", cuisine:'Home Cooking'}];
+					$scope.selectRestaurant = function(row) { $scope.selectedRow = row;
+					}; 
+			}
+	</script>
+
+	</body>
+</html>
