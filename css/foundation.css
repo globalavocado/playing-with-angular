@@ -3688,6 +3688,11 @@ a {
     padding: 20px;
   }
 
+.red {
+    color: red;
+    padding: 20px;
+}
+
 /* Default paragraph styles */
 p {
   font-family: inherit;
