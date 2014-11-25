@@ -13,13 +13,13 @@
 					<div ng-repeat="item in items">
 						<span>{{item.title}}</span>
 						<input ng-model="item.quantity">
-						<span class="green">{{item.price | currency}}</span> 
-						<span>{{item.price * item.quantity | currency}}</span>
+						<span class="green">{{item.price | currency:"&pound;"}}</span> 
+						<span>{{item.price * item.quantity | currency:"&pound;"}}</span>
 					</div>
 					
-					<div>subtotal: {{subtotal() | currency}}</div>
-					<div><span class="red">discount: {{bill.discount | currency}}</span></div> 
-					<div><b>total: {{totalCart() | currency}}</b></div> 
+					<div>subtotal: {{subtotal() | currency:"&pound;"}}</div>
+					<div><span class="red">discount: - {{bill.discount | currency:"&pound;"}}</span></div> 
+					<div><b>total: {{totalCart() | currency:"&pound;"}}</b></div> 
 				</div>
 		</div>
 

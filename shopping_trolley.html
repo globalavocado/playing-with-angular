@@ -1,7 +1,7 @@
 <html ng-app=''> 
 
 	<head>
-		<title>Your Shopping Cart</title> 
+		<title>Your Shopping Trolley</title> 
 		<link rel="stylesheet" href="css/foundation.css">
 	</head>
 
@@ -16,8 +16,8 @@
 		
 			<input ng-model='item.quantity'>
 		
-			<span class='green'>{{item.price | currency}}</span>
-			<b>{{item.price * item.quantity | currency}}</b>
+			<span class='green'>{{item.price | currency:"&pound;"}}</span>
+			<b>{{item.price * item.quantity | currency:"&pound;"}}</b>
 			
 			<button ng-click="remove($index)">Remove</button>
 		<div class="top-bar-section"></div>
