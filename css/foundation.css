@@ -5353,6 +5353,8 @@ ul.off-canvas-list {
 
 table {
   background: white;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 1.25rem;
   border: solid 1px #dddddd;
   table-layout: auto; }
