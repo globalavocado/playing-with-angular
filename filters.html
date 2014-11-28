@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang='en-GB'>
+
+<head>
+	<meta charset='utf-8'>
+	<title>title case filters</title>
+	<link rel="stylesheet" href="css/foundation.css">
+</head>
+
+	<body ng-app='HomeModule' ng-controller="HomeController"> 
+		<div class='pagination-centered'>
+			<h1>example of a title case filter:</h1>
+			<h2>{{pageHeading | titleCase}}</h2>
+		</div>
+	</body>
+
+		<script type="text/javascript" src="js/angular.js"></script> 
+	
+		<script>
+			function HomeController($scope) {
+			$scope.pageHeading = 'behold the majesty of your page title';
+			}
+			var homeModule = angular.module('HomeModule', []); homeModule.filter('titleCase', function() {
+			
+			var titleCaseFilter = function(input) {
+			
+			var words = input.split(' ');
+				for (var i = 0; i < words.length; i++) {
+				          words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+				        }
+				return words.join(' '); 
+			};
+			return titleCaseFilter; 
+		});
+
+		</script>
+
+	</body>
+			
+</html>

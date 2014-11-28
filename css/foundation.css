@@ -3728,7 +3728,8 @@ h1 {
   font-size: 2.125rem; }
 
 h2 {
-  font-size: 1.6875rem; }
+  font-size: 1.6875rem; 
+  color: blue;}
 
 h3 {
   font-size: 1.375rem; }
