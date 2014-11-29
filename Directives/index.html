@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang='en' ng-app='app'>
+
+  <head>
+    <link rel="stylesheet" href="../css/foundation.css">
+    <title>get focused</title>
+  </head>
+
+  <body ng-controller="SomeController">
+    <div class='pagination-centered'>
+    <h1>focus directive</h1>
+      <button ng-click="clickUnfocused()">
+        not focused
+      </button>
+      <button ngbk-focus ng-click="clickFocused()">
+        I'm very focused!
+      </button>
+      
+      <div>{{message.text}}</div>
+    </div>
+  
+  <script src='../js/angular.js'></script> 
+  <script src='controllers.js'></script>
+
+  </body>
+</html>
