@@ -81,6 +81,10 @@ body {
     background-color: lightgreen;
     }
 
+    .ng-invalid {
+      border-color: red;
+    }
+
 /* end of styling with angular.js */
 
 a:hover {
@@ -1688,14 +1692,19 @@ input[type="radio"] + label {
 
 /* Normalize file input width */
 input[type="file"] {
-  width: 100%; }
+  width: 50%; }
 
 /* HTML5 Number spinners settings */
 /* We add basic fieldset styling */
 fieldset {
   border: 1px solid #dddddd;
   padding: 1.25rem;
-  margin: 1.125rem 0; }
+  margin: 1.125rem 0; 
+  width: 50%;
+  float: center;
+  display: inline-block; 
+  }
+  
   fieldset legend {
     font-weight: bold;
     background: white;

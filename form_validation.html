@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang='en-GB' ng-app>
+
+<head>
+	<title>form validation</title>
+	<link rel="stylesheet" href="css/foundation.css">
+</head>
+
+	<body>
+	    <div class='pagination-centered'>
+		    <h1>sign-up</h1>
+				<form name='addUserForm' ng-controller="AddUserController">
+				<div ng-show='message'>{{message}}</div>
+				<fieldset>
+					<div>first name: <input type='text' name='firstName' ng-model='user.first' required></div> 
+					<div>last name: <input type='text' ng-model='user.last' required></div>
+					<div>email: <input type='email' ng-model='user.email' required></div> 
+					<div>age: <input type='number'
+						ng-model='user.age' 
+						ng-maxlength='3' 
+						ng-min='1'></div>
+					<div>
+						<button ng-click='addUser()' ng-disabled='!addUserForm.$valid'>submit</button>
+					</div>
+				</fieldset>
+				</form>
+		</div>
+
+		<script type="text/javascript" src="js/angular.js"></script> 
+	
+		<script>
+			function AddUserController($scope) { 
+				$scope.message = '';
+
+				$scope.addUser = function () {
+				// TODO for the reader: actually save user to database... 
+					$scope.message = 'Thanks, ' + $scope.user.first + ', we added you!';
+				}; 
+			}
+		</script>
+
+	</body>
+</html>
