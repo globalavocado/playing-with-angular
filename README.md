@@ -4,6 +4,6 @@ Following a mixture of the excellent tutorials on <a href="https://thinkster.io/
 CSS framework by <a href="http://foundation.zurb.com/">Foundation</a>.
 
 <h3>Technologies used:</h3>
-- angular.js
+- angular.js (version 1.2.26)
 - HTML5/CSS
 - bootstrap (Foundation)
